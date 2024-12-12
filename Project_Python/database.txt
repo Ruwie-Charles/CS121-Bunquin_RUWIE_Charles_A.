@@ -1,0 +1,30 @@
+-- Create Database
+CREATE DATABASE ffesdb; (short for free fall educational support data base)
+
+-- Use Database
+USE bookstore;
+
+-- Create the users table
+CREATE TABLE users (
+    User_ID INT(11) NOT NULL AUTO_INCREMENT,
+    First_Name VARCHAR(50) NOT NULL,
+    Last_Name VARCHAR(50) NOT NULL,
+    Date_of_Birth DATE DEFAULT NULL,
+    Gender CHAR(1) DEFAULT NULL,
+    Age INT(11) DEFAULT NULL,
+    PRIMARY KEY (User_ID)
+);
+
+CREATE TABLE results (
+    Result_ID INT(11) NOT NULL AUTO_INCREMENT,
+    Problem_1 VARCHAR(50) NOT NULL,
+    Problem_2 VARCHAR(50) NOT NULL,
+    Problem_3 VARCHAR(50) NOT NULL,
+    Score INT(11) NOT NULL,
+    PRIMARY KEY (Result_ID)
+);
+
+
+1.Users and Results
+Type: One-to-Many (1:N)
+Description: Each users has one results, but results must have only one users.
